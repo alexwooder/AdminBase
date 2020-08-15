@@ -14,7 +14,9 @@
     export default {
         name: "welcome",
         data(){
-           
+           return{
+			   
+		   };
         },
         mounted(){
            

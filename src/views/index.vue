@@ -1,5 +1,21 @@
 <style scoped>
-   
+   .fade-enter-active {
+     animation: bounce-in .5s;
+   }
+   .fade-leave-active {
+     animation: bounce-in .5s reverse;
+   }
+   @keyframes bounce-in {
+     0% {
+       transform: scale(0);
+     }
+     50% {
+       transform: scale(1.5);
+     }
+     100% {
+       transform: scale(1);
+     }
+   }
 </style>
 <template>
     <div class="index-main">
@@ -20,7 +36,9 @@
 				<nav>
 					当前位置
 				</nav>
-				<router-view></router-view>
+				<transition name="fade">
+					<router-view></router-view>
+				</transition>
 				<footer>页脚</footer>
 			</article>
 		</main>

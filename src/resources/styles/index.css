@@ -23,11 +23,11 @@
 .index-main>header>ul>li{
 	margin-right: 15px;
 	font-size: 18px;
-	height: 50px;
+	height: 40px;
 	line-height: 50px;
 }
 .index-main>header>ul>li:nth-child(2){
-	width: 50px;
+	width: 40px;
 	border: var(--color-light-blue) 1px solid;
 	background-image: url(../imgs/1.jpg);
 	background-size: cover;

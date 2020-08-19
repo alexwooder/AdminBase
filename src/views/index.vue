@@ -1,6 +1,6 @@
 <template>
 	<div class="main">
-		<router-link to="./admin_index1">管理界面1</router-link>
+		<router-link to="/admin_index1">管理界面1</router-link>
 		<router-link to="./admin_index2">管理界面2</router-link>
 		<router-link to="./app_index1">APP界面</router-link>
 	</div>

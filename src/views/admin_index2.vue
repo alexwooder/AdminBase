@@ -1,9 +1,9 @@
 <style scoped>
    .fade-enter-active {
-     animation: bounce-in .5s;
+     animation: bounce-in1 .5s;
    }
    .fade-leave-active {
-     animation: bounce-in .5s reverse;
+     animation: bounce-in1 .5s reverse;
    }
    @keyframes bounce-in {
      0% {
@@ -58,7 +58,7 @@
           
         },
         mounted(){
-          this.$router.push("/welcome")  ;
+          //this.$router.push("/welcome")  ;
         },
         methods:{
 

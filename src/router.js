@@ -4,7 +4,6 @@ const routers = [
         name:"index",
         component: (resolve) => require(['./views/index.vue'], resolve),
         children:[
-            {path: '/welcome',component: (resolve) => require(['./views/welcome.vue'], resolve)}
             
         ]
 },
@@ -13,8 +12,8 @@ const routers = [
         name:"index",
         component: (resolve) => require(['./views/admin_index1.vue'], resolve),
         children:[
-            {path: '/welcome',component: (resolve) => require(['./views/welcome.vue'], resolve)}
-            
+            {path: '/welcome',component: (resolve) => require(['./views/welcome.vue'], resolve)},
+			{path: '/animation',component: (resolve) => require(['./views/animation.vue'], resolve)}
         ]
 },
 {

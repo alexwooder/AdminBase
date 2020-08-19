@@ -7,13 +7,12 @@
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
-	color: var(--color-white);
+	color: var(--color-white2);
 }
 
 html body{
 	height: 100vh;
 	width: 100vw;
-	background-color: aqua;
 }
 
 .app-main{

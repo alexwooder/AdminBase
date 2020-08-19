@@ -1,67 +1,35 @@
-<style scoped>
-   .fade-enter-active {
-     animation: bounce-in .5s;
-   }
-   .fade-leave-active {
-     animation: bounce-in .5s reverse;
-   }
-   @keyframes bounce-in {
-     0% {
-       transform: scale(0);
-     }
-     50% {
-       transform: scale(1.5);
-     }
-     100% {
-       transform: scale(1);
-     }
-   }
-</style>
 <template>
-    <div class="index-main">
-		<header>
-			<div></div>
-			<ul>
-				<li>消息</li>
-				<li></li>
-				<li>Alex Wooder</li>
-			</ul>
-		</header>
-		<main>
-			<aside>
-					<section>菜单</section>
-				导航
-			</aside>
-			<article>
-				<nav>
-					当前位置
-				</nav>
-				<transition name="fade">
-					<router-view></router-view>
-				</transition>
-				<footer>页脚</footer>
-			</article>
-		</main>
-    </div>
+	<div class="main">
+		<router-link to="./admin_index1">管理界面1</router-link>
+		<router-link to="./admin_index2">管理界面2</router-link>
+		<router-link to="./app_index1">APP界面</router-link>
+	</div>
+	
 </template>
-<script>
-   
-    export default {
-        data(){
-           
-            return{
-                changePassModal:false
-              
-            };
-        },
-        computed:{
-          
-        },
-        mounted(){
-          this.$router.push("/welcome")  ;
-        },
-        methods:{
 
-        }
-    }
+<script>
 </script>
+
+<style scoped>
+	.main{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	
+	.main a{
+		text-decoration: none;
+		border: var(--color-white) 1px solid;
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 10px;
+		
+		margin:15px;
+	}
+	
+	.main a:hover{
+		transform: scale(1.1);
+	}
+</style>

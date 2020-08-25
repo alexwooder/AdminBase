@@ -77,6 +77,8 @@
 	flex-flow: column nowrap;
 	justify-content: space-between;
 	flex: 1;
+	overflow-x: hidden;
+	border: #DDDDDD 1px solid;
 }
 .index-main>main>article>nav{
 	display: flex;

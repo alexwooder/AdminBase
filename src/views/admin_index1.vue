@@ -1,12 +1,19 @@
 <style scoped>
    .fade-enter-active {
-     animation: bounce-in 2s;
+	 /* animation-delay: 0.25s; */
+     /* animation: bounce-in 1s; */
+	 transition: all .5s ease;
    }
    .fade-leave-active {
-     animation: bounce-out 2s;
+     /* animation: bounce-out 1s; */
+		transition: all .2s ease;
+   }
+   .fade-enter, .fade-leave-to
+   /* .slide-fade-leave-active for below version 2.1.8 */ {
+     opacity: 0;
    }
    @keyframes bounce-in {
-	   0% {
+	   /* 0% {
 	      transform:translateX(-100%);
 	    }
 	    50% {
@@ -14,17 +21,25 @@
 	    }
 	    100% {
 	     transform:translateX(0%);
-	    }
-		@keyframes bounce-out {
-			   0% {
-			      transform:translateX(0%);
-			    }
-			    50% {
-			      transform:translateX(50%);
-			    }
-			    100% {
-			     transform:translateX(100%);
-		}
+	    } 
+		from {transform:translateY(-100%);}
+		to {transform:translateY(0%);}*/
+		
+	}
+	@keyframes bounce-out {
+		
+		/* from {transform:translateY(0%);} 
+		to {transform:translateY(100%);}*/
+		  /* 0% {
+			  transform:translateX(0%);
+			}
+			50% {
+			  transform:translateX(50%);
+			}
+			100% {
+			 transform:translateX(100%);
+		} */
+	}
     /* 0% {
        transform: scale(0);
      }
@@ -34,7 +49,7 @@
      100% {
        transform: scale(1);
      }*/
-   }
+   
 </style>
 <template>
     <div class="index-main">
@@ -51,10 +66,13 @@
 					<section>菜单</section>
 				<ul>
 					<li>
-						<section @click="route_to('/welcome')">333</section>
+						<section @click="route_to('/welcome')">欢迎页</section>
 					</li>
 					<li>
-						<section @click="route_to('/animation')">admin_index22</section>
+						<section @click="route_to('/css3text')">css文本</section>
+					</li>
+					<li>
+						<section @click="route_to('/animation')">css动画</section>
 					</li>
 					
 				</ul>
@@ -63,16 +81,16 @@
 				<nav>
 					当前位置
 				</nav>
-				<transition name="fade">
-					<router-view></router-view>
-				</transition>
+					<transition name="fade">
+						<router-view></router-view>
+					</transition>
+			
 				<footer>页脚</footer>
 			</article>
 		</main>
     </div>
 </template>
 <script>
-   import Routers from '../router';
 
     export default {
         data(){

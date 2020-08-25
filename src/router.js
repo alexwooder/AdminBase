@@ -13,6 +13,7 @@ const routers = [
         component: (resolve) => require(['./views/admin_index1.vue'], resolve),
         children:[
             {path: '/welcome',component: (resolve) => require(['./views/welcome.vue'], resolve)},
+			{path: '/css3text',component: (resolve) => require(['./views/CSS3_Text.vue'], resolve)},
 			{path: '/animation',component: (resolve) => require(['./views/animation.vue'], resolve)}
         ]
 },

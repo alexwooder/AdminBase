@@ -2,7 +2,7 @@
    
 </style>
 <template>
-    <div>
+    <div style="">
         <div id="main" class="index-chart-contain">欢迎</div>
         <div id="main1" class="index-chart-contain">欢迎</div>
         <div id="main2" class="index-chart-contain">欢迎</div>

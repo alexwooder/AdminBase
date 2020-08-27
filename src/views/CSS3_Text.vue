@@ -58,14 +58,16 @@
 					<div style="width: 200px;height: 200px;text-align: center;outline: #6495ED solid 5px;">
 						轮廓线是不占用空间的
 					</div>
-					<div class="eyes"></div>
+					
 				</div>
 				
 			</article>
 			<article id="text-shadow">
-				<h1>文本阴影</h1>
-				
-				
+				<h1>使用::after和::before伪类</h1>
+				<section data-title="用户名称" class="form-input">
+					<input  />
+				</section>
+				<div class="eyes"></div>
 			</article>
 		</div>
 	</div>
@@ -157,5 +159,25 @@
 		position: relative;
 		left: 67px;
 		top: -25px;
+		}
+		.form-input{
+			display: relative;
+			width: 400px;
+		}
+		.form-input input{
+			outline: none;
+			border: none;
+		}
+		
+		.form-input::after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: #CCCCCC;
+		}
+		
+		.form-input::before{
+			content: attr(data-title)+":";
 		}
 </style>

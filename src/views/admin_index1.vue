@@ -66,20 +66,23 @@
 					<section>菜单</section>
 				<ul>
 					<li>
-						<section @click="route_to('/welcome')">欢迎页</section>
+						<section @click="route_to('/welcome','欢迎页')">欢迎页</section>
 					</li>
 					<li>
-						<section @click="route_to('/css3text')">css文本</section>
+						<section @click="route_to('/css3text','css文本')">css文本</section>
 					</li>
 					<li>
-						<section @click="route_to('/animation')">css动画</section>
+						<section @click="route_to('/css3float','css浮动（float）')">css浮动（float）</section>
+					</li>
+					<li>
+						<section @click="route_to('/animation','css动画')">css动画</section>
 					</li>
 					
 				</ul>
 			</aside>
 			<article>
 				<nav>
-					当前位置
+					{{current_path}}
 				</nav>
 					<transition name="fade">
 						<router-view></router-view>
@@ -97,7 +100,8 @@
            
             return{
                 changePassModal:false,
-				menus:[]
+				menus:[],
+				current_path:"当前位置"
             };
         },
         computed:{
@@ -113,6 +117,7 @@
         methods:{
 			route_to(url,params){
 				this.$router.push(url);
+				this.current_path = params;
 			}
         }
     }

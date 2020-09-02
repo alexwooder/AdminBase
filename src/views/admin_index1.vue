@@ -65,17 +65,8 @@
 			<aside>
 					<section>菜单</section>
 				<ul>
-					<li>
-						<section @click="route_to('/welcome','欢迎页')">欢迎页</section>
-					</li>
-					<li>
-						<section @click="route_to('/css3text','css文本')">css文本</section>
-					</li>
-					<li>
-						<section @click="route_to('/css3float','css浮动（float）')">css浮动（float）</section>
-					</li>
-					<li>
-						<section @click="route_to('/animation','css动画')">css动画</section>
+					<li v-for="item in menus">
+						<section @click="route_to(item.path,'欢迎页')">{{item.meta.name}}</section>
 					</li>
 					
 				</ul>
@@ -101,17 +92,20 @@
             return{
                 changePassModal:false,
 				menus:[],
-				current_path:"当前位置"
+				current_path:"当前位置",
+				routers : []
             };
         },
         computed:{
           
         },
         mounted(){
-			let key = this.$route.fullPath;
+			let key = "/admin_index1";
 			this.menus = this.$router.options.routes.filter((item)=>{
 			return item.path === key;
 		 });
+		 this.menus = this.menus[0]["children"];
+		 debugger
 		 console.log(this.menus);
         },
         methods:{

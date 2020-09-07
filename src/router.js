@@ -20,6 +20,13 @@ const routers = [
         ]
 },
 {
+        path: '/category',
+        name:"index",
+        component: (resolve) => require(['./views/mall/category'], resolve),
+        children:[
+                   ]
+},
+{
         path: '/admin_index2',
         name:"index",
         component: (resolve) => require(['./views/admin_index2.vue'], resolve),

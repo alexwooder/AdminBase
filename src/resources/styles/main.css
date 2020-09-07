@@ -1,7 +1,7 @@
 @import "./custom.css";
 @import "./admin_index1.css";
 @import "./CSS3_Text.css";
-
+@import "./mall/category.css";
 
 *{
 	padding: 0px;

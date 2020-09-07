@@ -1,0 +1,15 @@
+.css3-grid-main{
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(2,50%);
+	grid-template-rows: repeat(2,50%);
+}
+
+
+.css3-grid-row{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 400px;
+}

@@ -105,7 +105,7 @@
 			return item.path === key;
 		 });
 		 this.menus = this.menus[0]["children"];
-		 debugger
+		 
 		 console.log(this.menus);
         },
         methods:{

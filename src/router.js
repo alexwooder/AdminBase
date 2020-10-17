@@ -9,7 +9,7 @@ const routers = [
 },
 {
         path: '/admin_index1',
-        name:"index",
+        name:"index1",
         component: (resolve) => require(['./views/admin_index1.vue'], resolve),
         children:[
             {path: '/welcome',meta:{"name":"欢迎页"},component: (resolve) => require(['./views/welcome.vue'], resolve)},
@@ -20,15 +20,19 @@ const routers = [
         ]
 },
 {
-        path: '/category',
-        name:"index",
-        component: (resolve) => require(['./views/mall/category'], resolve),
+        path: '/mall_index',
+        name:"index2",
+        component: (resolve) => require(['./views/mall/index'], resolve),
         children:[
+			{path: '/index_list',meta:{"name":"首页"},component: (resolve) => require(['./views/mall/index_list'], resolve)},
+			{path: '/category',meta:{"name":"分类"},component: (resolve) => require(['./views/mall/category'], resolve)},
+			{path: '/car',meta:{"name":"购物车"},component: (resolve) => require(['./views/mall/car'], resolve)},
+			{path: '/me',meta:{"name":"我"},component: (resolve) => require(['./views/mall/me'], resolve)},
                    ]
 },
 {
         path: '/admin_index2',
-        name:"index",
+        name:"index3",
         component: (resolve) => require(['./views/admin_index2.vue'], resolve),
         children:[
             

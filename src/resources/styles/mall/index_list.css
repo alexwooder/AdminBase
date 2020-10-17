@@ -1,0 +1,111 @@
+.mall-index-list-main{
+	width: 100vw;
+}
+.mall-index-list-header{
+	position: fixed;
+	top: 0px;
+	height: 5%;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #FAEBD7;
+	margin-bottom: 5px;
+	z-index: 10;
+}
+.mall-index-list-img-roll{
+	width: 100vw;
+	height: 25%;
+	margin-top: 12%;
+	border-radius: 10px;
+	border: 1px solid var(--color-gray);
+	overflow:hidden;
+	position: relative;
+}
+
+.mall-index-list-img-roll>li{
+	width: 100%;
+	height: 100%;
+	float: left;
+	list-style: none;
+	position: absolute;
+	border: 1px solid #555555;
+}
+
+.mall-index-list-img-roll-btn{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 15%;
+	background: rgba(100,100,100,0.2);
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.mall-index-list-img-roll-btn>li{
+	width: 20px;
+	height: 5px;
+	list-style: none;
+	border-radius: 2px;
+	margin-left: 2px;
+	background-color: #FFFFFF;
+}
+
+/*-------------------------goods list-------------------------------*/
+
+.mall-index-list-goods-container {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin-top: 5px;
+	justify-content: space-between;
+
+}
+
+.mall-index-list-goods-detail-container {
+	width: 48vw;
+	height: calc(48vw * 1.52);
+	border-radius: 10px;
+	border: 1px solid #F0F2F5;
+	margin: 5px 2px;
+	overflow: hidden;
+}
+
+.mall-index-list-goods-detail-img{
+	width: 100%;
+	height: calc(100% - 80px);
+	
+}
+
+.mall-index-list-goods-detail-desc{
+	width: 100%;
+	/* white-space: nowrap;
+	font-size: 15px;
+	overflow: hidden;*/
+	height: 30px;
+	text-overflow:ellipsis;/*文本溢出的时候显示省略号*/
+	font-size: 13px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	color: #232326;
+	margin-top: 5px;
+	line-height: 16px;
+	margin-bottom: 3px;
+	padding: 0 4px;
+}
+
+.mall-index-list-goods-detail-price{
+	width: 100%;
+	color: #f23030;
+	display: inline-block;
+	padding: 0 5px 0 4px;
+	position: relative;
+	top: 1px;
+	height: 25px;
+	line-height: 25px;
+}

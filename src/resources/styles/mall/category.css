@@ -1,6 +1,6 @@
 .category-main{
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: stretch;
@@ -40,8 +40,14 @@
 .category-body>article{
 	flex: 1;
 	background-color: #6495ED;
+	display: flex;
+	flex-flow: column nowrap;
 }
 
+.category-body>article>div{
+	border: 1px solid #ccc;
+	height: 30%;
+}
 
 /*-----------------footer---------------------*/
 .category-footer{

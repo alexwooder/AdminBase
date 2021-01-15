@@ -47,6 +47,15 @@ const routers = [
             
             
         ]
+},
+{
+        path: '/dashboard1',
+        name:"index",
+        component: (resolve) => require(['./views/dashboard1.vue'], resolve),
+        children:[
+            
+            
+        ]
 }
 ];
 export default routers;

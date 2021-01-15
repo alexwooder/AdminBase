@@ -10,7 +10,7 @@
 			 </li>
 			 <div key="toolbar">
 				<ul class="mall-index-list-img-roll-btn">
-					<li v-for="(item,index) in imgList" @click="onImgRollBtnClick(item,index)"></li>
+					<li :class="index === currentIndex? 'mall-index-list-img-roll-btn-active':''"   v-for="(item,index) in imgList" @click="onImgRollBtnClick(item,index)"></li>
 				</ul>
 			 </div>
 		</transition-group>
@@ -32,6 +32,7 @@
 	export default{
 		data(){
 			return{
+				currentIndex:0,
 				imgList:[
 					{
 						url:require("@/resources/imgs/img1.jpg"),
@@ -124,6 +125,7 @@
 			},
 			onImgRollBtnClick(item, index){
 				let len = this.imgList.length;
+				this.currentIndex = index;
 				for(let i = 0; i< len;i++){
 					let leftVal = this.imgList[i]["left"];
 					this.imgList[i]["left"] = i - index;
@@ -137,4 +139,5 @@
 	.flip-list-move {
 	  transition: transform 1s;
 	}
+	
 </style>
